@@ -14,7 +14,7 @@ function App() {
     <AuthProvider>
       <Router>
         <Routes>
-          {/* Default route to redirect to login */}
+          {/* The first page in app */}
           {/* <Route path="/" element={<Navigate to="/login" />} /> */}
           <Route path="/" element={<HomePage />} />
 
