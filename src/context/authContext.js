@@ -1,5 +1,6 @@
 import { createContext, useState } from 'react';
 import axios from 'axios';
+const API_URL = 'https://bootcamp-backend-8x0p.onrender.com';
 
 const AuthContext = createContext();
 
@@ -7,13 +8,13 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   const login = async (email, password) => {
-    const { data } = await axios.post('/api/auth/login', { email, password });
+    const { data } = await axios.post(`${API_URL}/api/auth/login`, { email, password });
     setUser(data);  // Set user data with token
     localStorage.setItem('user', JSON.stringify(data));  // Save token to localStorage
   };
 
   const signup = async (name, email, password, role) => {
-    const { data } = await axios.post('/api/auth/signup', { name, email, password, role });
+    const { data } = await axios.post(`${API_URL}/api/auth/signup`, { name, email, password, role });
     setUser(data);
     localStorage.setItem('user', JSON.stringify(data));
   };
