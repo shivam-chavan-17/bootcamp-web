@@ -36,7 +36,7 @@ const Homepage = () => {
 
                     {/* Right side: Image */}
                     <div className="md:w-1/2 flex justify-center">
-                        <img src="your-image-here.jpg" alt="SVG Design" className="max-w-xs" />
+                        <img src="header.svg" alt="SVG Design" className="max-w-xs" />
                     </div>
                 </div>
             </header>
@@ -45,7 +45,7 @@ const Homepage = () => {
             <section className="container mx-auto py-16 flex flex-col md:flex-row items-center">
                 {/* About Image */}
                 <div className="w-full md:w-1/2">
-                    <img src="your-about-image.jpg" alt="About" className="rounded shadow-lg" />
+                    <img src="s7.jpg" alt="About" className="rounded shadow-lg" />
                 </div>
                 {/* About Content */}
                 <div className="w-full md:w-1/2 md:pl-12">
@@ -81,7 +81,7 @@ const Homepage = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[1, 2, 3].map((i) => (
                             <div key={i} className="bg-gray-100 p-6 rounded shadow-lg">
-                                <img src={`bootcamp-image-${i}.jpg`} alt={`Bootcamp ${i}`} className="mb-4 rounded" />
+                                {/* <img src={`s7-${i}.jpg`} alt={`Bootcamp ${i}`} className="mb-4 rounded" /> */}
                                 <h3 className="text-xl font-semibold mb-2">Bootcamp {i}</h3>
                                 <p className="text-gray-600">Duration: 8 Weeks</p>
                                 <p className="text-gray-600">Videos: 25</p>
