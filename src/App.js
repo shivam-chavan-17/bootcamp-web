@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Navigate } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import { AuthProvider } from "./context/authContext";
@@ -9,13 +8,12 @@ import AdminDashboard from "./pages/AdminDashboard";
 import HomePage from "./pages/HomePage";
 
 
-function App() {
+const App = () => {
   return (
     <AuthProvider>
       <Router>
         <Routes>
           {/* The first page in app */}
-          {/* <Route path="/" element={<Navigate to="/login" />} /> */}
           <Route path="/" element={<HomePage />} />
 
           <Route path="/login" element={<LoginPage />} />
@@ -23,14 +21,14 @@ function App() {
 
           {/* Student Dashboard with Protected Route */}
           <Route path="/student-dashboard" element={
-            <ProtectedRoute role="student">
+            <ProtectedRoute role='student'>
               <StudentDashboard />
             </ProtectedRoute>
           } />
 
           {/* Admin Dashboard with Protected Route */}
           <Route path="/admin-dashboard" element={
-            <ProtectedRoute role="admin">
+            <ProtectedRoute role='admin'>
               <AdminDashboard />
             </ProtectedRoute>
           } />

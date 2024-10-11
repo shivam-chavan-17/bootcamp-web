@@ -15,7 +15,7 @@ const SignupPage = () => {
     e.preventDefault();
     try {
       await signup(name, email, password, role);
-      navigate('/student-dashboard'); // Redirect to student dashboard after signup
+      navigate('/login'); // Redirect to student dashboard after signup
     } catch (error) {
       console.error('Signup error:', error.response.data.message);
     }

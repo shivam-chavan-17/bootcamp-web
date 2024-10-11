@@ -1,6 +1,6 @@
 import React from 'react'
 
-function StudentDashboard() {
+const StudentDashboard = () => {
   return (
     <div>
       Student
