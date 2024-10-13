@@ -80,8 +80,8 @@ export const AuthProvider = ({ children }) => {
   };
 
   const signup = async (name, email, password, role) => {
-    // const { data } = await axios.post('https://bootcamp-backend-8x0p.onrender.com/api/auth/signup', { name, email, password, role });
-    const { data } = await axios.post('/api/auth/signup', { name, email, password, role });
+    const { data } = await axios.post('https://bootcamp-backend-8x0p.onrender.com/api/auth/signup', { name, email, password, role });
+    // const { data } = await axios.post('/api/auth/signup', { name, email, password, role });
     setUser(data);
     localStorage.setItem('user', JSON.stringify(data));
   };
