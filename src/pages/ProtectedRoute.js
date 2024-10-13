@@ -6,14 +6,14 @@ const ProtectedRoute = ({ role, children }) => {
   const { user, loading } = useContext(AuthContext);
 
   if (loading) {
-    return <div>Loading...</div>;  // Show a loading spinner or message while checking authentication
+    return <div>Loading...</div>;  
   }
 
   if (!user) {
-    return <Navigate to="/login" />;
+    return <Navigate to="/login" replace />;
   }
 
-  if (user.role !== role) {
+  if (role && user.role !== role) {
     return <Navigate to="/" />;  // Unauthorized access
   }
 

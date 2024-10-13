@@ -14,12 +14,11 @@ const LoginPage = () => {
     try {
       await login(email, password);
       const userData = JSON.parse(localStorage.getItem('user'));
-      // localStorage.setItem('user', JSON.stringify(userData));
       if (userData.role === 'admin') {
-        navigate('/admin-dashboard');
+        navigate('/');
         alert('login successful')
       } else {
-        navigate('/student-dashboard');
+        navigate('/');
         alert('login successful')
       }
     } catch (error) {
